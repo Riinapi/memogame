@@ -1,0 +1,155 @@
+body {
+    background-color: lightgreen;
+    background-image: url(../img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-size: 24px;
+    font-family: 'Advent Pro';
+    color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.startEnd {
+    background-color: yellow;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 25px solid;  
+    border-image: url(../img/wood.jpg) 30 stretch;     
+}
+
+#start {
+    background-image: url(../img/start.jpeg);  
+}
+
+#end {
+    background-image: url(../img/end.jpg);
+    justify-content: center; 
+    font-weight: bold;
+    font-size: 26px;
+    opacity: 0;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    cursor: pointer;
+    border:solid 3px white;
+}
+
+#game {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;   
+    width: 600px;
+    height: 500px;
+}
+
+#time {
+    grid-area: 4 / 1 / 5 / 5; 
+    margin-left: 260px;
+    padding-top:10px;  
+}
+
+#clock {
+    background-color: brown;
+    background-image: url(../img/wood.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    width: 120px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgb(172, 84, 16);   
+}
+
+.name {
+    margin-top: 25px;  
+}
+
+input {
+    background:rgba(255, 255, 255, 0.692);
+    border: none;
+    height:40px ;
+    margin: 5px;   
+    text-align: center;
+    border: 1px solid  white;
+    border-radius: 10px;
+}
+
+input:hover {
+    border: solid 1px white;
+    background: white;
+}
+
+input:focus {
+    background: white;
+    outline: none;
+}
+
+input::placeholder {
+    color: grey; 
+    font-size: 18px ;
+}
+
+#startButton {
+    width: 95px;
+    height: 40px;
+    border-radius: 10px;
+    margin:5px;
+    padding-bottom: 15px;
+    background-color: brown;
+    background-image: url(../img/wood.jpg); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    border: 1px solid rgb(172, 84, 16);
+    outline: none!important;
+    font-family: 'Agbalumo';
+}
+
+#startButton:hover {
+    box-shadow: 0 5px #6666669a;
+}
+
+#startButton:active {
+    transform: translateY(4px);
+}
+
+#rulesShow {
+    font-size: 18px;  
+}
+#rulesShow:hover {
+    text-decoration-line: underline;
+}
+#rules {
+    width: 300px;
+    background-color: lightyellow;
+    text-align:center;
+    font-size: 18px;
+    padding: 10px;
+    padding-top: 20px;    
+}
+
+h1 {
+    font-family: 'Agbalumo'; 
+}
+

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"> 
+  <head>
+    <title>Memo Game</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Riina Pietikäinen, LAPIN AMK">
+    <meta name="description" content="Harjoitus muistipelin tekemisestä">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Fontti-->
+    <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Agbalumo' rel='stylesheet'>
+    <!-- Oma css-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Anime.js-->
+    <script src="js/anime.min.js"></script>
+    <script src="js/oma.anime.js"></script>
+    <!-- Angular-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="js/ang.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/oma.jquery.js"></script> 
+    <!-- Oma JS -->
+    <script src="js/js.js"></script>
+  </head>
+  
+  <body>
+    
+    <div ng-app="myApp" class="container" ng-controller="myCtrl">
+
+      <!-- aloita peli -->
+      <div class="startEnd" id="start">
+          <div class="name"> Name: </div>
+          <input type="text" ng-model="name" id="playerName" oninput="upperCase()" placeholder="Player name here"> <!-- Käytetään isoja kirjaimia -->
+          <button id="startButton" ng-click="startGame()">Play</button>
+          <div id="rulesShow" type="button" ng-click="howPlay()">
+            {{ showMe ? 'Hide' : 'How to play?' }} <!-- korvataan teksti -->
+          </div>
+
+          <div id="rules" ng-show="show"> <!-- sääntöjen näyttäminen-->
+              <p>Write your name and start the game by pressing "Play". 
+                Flip the cards one by one and try to find pairs as quickly as possible. 
+                If luck is on your side, the cards will stay open. 
+                If not, the cards will be turned back. 
+                The end of the game is near when all pairs have been found!
+              </p>
+          </div>
+      </div>
+      
+      <!-- peli -->
+      <div class="row" id="game">
+        <!-- kortit luodaan oma.jquery.js -->
+        <div ng-controller="TimerClock" ng-show="GameStarted" id="time">
+          <div id="clock">
+            Time {{Timer}}
+          </div>
+        </div>
+      </div>
+
+      <!-- peli päättyy -->
+      <div class="startEnd" id="end" ng-controller="TimerClock">
+          <h1>{{name | uppercase}}</h1>
+          <div>you found all pairs!</div>
+          <div>Your time was {{Timer}}</div>
+      </div>
+
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
