@@ -15,4 +15,4 @@ Visuaalinen teema on viidakkomainen, ja kaikki kuvat on luotu Canvalla. Pelissä
 
 ## Screenshots
 ```markdown
-<img src="screenshots/memo.png" height="200" />
+<img src="screenshots/memo.png.png" height="200" />
