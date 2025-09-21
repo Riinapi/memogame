@@ -4,7 +4,7 @@ Klassinen muistipeli, jossa pelaaja kääntää kortteja ja yrittää löytää 
 
 ## Kuvaus
 Peli on tehty Angularilla ja JavaScriptin kirjastoilla, kuten Anime.js, tuomaan animaatioita ja vuorovaikutteisuutta.  
-Visuaalinen teema on viidakkomainen, ja kaikki kuvat on luotu Canvalla. Pelissä on ajastin ja animoidut korttien käännösliikkeet.
+Visuaalinen teema on viidakkomainen, ja kuvat on luotu Canvalla. Pelissä on ajastin ja animoidut korttien käännösliikkeet.
 
 ## Tekniikat
 - HTML & CSS  
